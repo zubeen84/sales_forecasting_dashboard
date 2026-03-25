@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Live App
-👉 [Click here to open the dashboard](https://your-app-url.streamlit.app)
+👉 [Click here to open the dashboard](https://salesforecastingdashboard-2rhmw5d3ejmqsnbxrbmu9j.streamlit.app/)
 
 ---
 
