@@ -199,6 +199,6 @@ or inventory decisions.
 
 **Zubeen Khalid**
 MSc Applied Data Science
-🏛️ ISO 42001 Certified AI Governance
-🔗 [LinkedIn](https://www.linkedin.com/in/zubeenkhalid)
-🐙 [GitHub](https://github.com/zubeen84)
+ ISO 42001 Certified AI Governance
+ [LinkedIn](https://www.linkedin.com/in/zubeenkhalid)
+ [GitHub](https://github.com/zubeen84)
