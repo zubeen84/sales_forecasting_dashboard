@@ -91,7 +91,7 @@ the presentation layer are always decoupled.
 - Grid search over (p,d,q)(P,D,Q,s) parameter space
 - Selected by minimising AIC across validation window
 - Residual diagnostics: normality, autocorrelation, heteroscedasticity
-- **RMSE: £332.37 — 3.3% of observed daily sales range**
+- **RMSE: £332.37 [3.3% of observed daily sales range]**
 
 ### Facebook Prophet Model
 - Additive seasonality with yearly components
