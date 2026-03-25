@@ -174,7 +174,7 @@ git clone https://github.com/zubeen84/sales_forecasting_dashboard.git
 cd sales_forecasting_dashboard
 pip install -r requirements.txt
 streamlit run timeseries_app.py
----
+```
 ---
 
 ##  Related Projects
