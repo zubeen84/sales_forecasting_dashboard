@@ -5,16 +5,16 @@
 ![Statsmodels](https://img.shields.io/badge/Forecast-Prophet-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 🚀 Live App
+## Live App
 👉 [Click here to open the dashboard](https://your-app-url.streamlit.app)
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project delivers a validated sales forecasting solution across 
-three product categories — Office Supplies, Furniture and Technology 
-— using Facebook Prophet time series models. The analysis is presented 
+three product categories: Office Supplies, Furniture and Technology 
+using Facebook Prophet time series models. The analysis is presented 
 through an interactive business intelligence dashboard built with 
 Streamlit and Plotly.
 
@@ -24,12 +24,12 @@ decisions and marketing strategy through accurate, interpretable
 
 ---
 
-## 🏗️ Architecture — Notebook vs Dashboard
+##  Architecture - Notebook vs Dashboard
 
 This project follows a **two-tier architecture** that reflects 
 real-world production data science practice:
 
-### Tier 1 — Analytical Layer (Jupyter Notebook)
+### Tier 1: Analytical Layer (Jupyter Notebook)
 The full modelling pipeline runs in the notebook:
 
 - Exploratory data analysis and seasonal decomposition
@@ -39,7 +39,7 @@ The full modelling pipeline runs in the notebook:
 - Forecast generation across 36-month horizon
 - Results exported as structured CSV files
 
-### Tier 2 — Presentation Layer (Streamlit Dashboard)
+### Tier 2: Presentation Layer (Streamlit Dashboard)
 The dashboard consumes pre-computed forecast outputs:
 
 - Loads Prophet forecast CSVs at runtime
@@ -50,39 +50,39 @@ The dashboard consumes pre-computed forecast outputs:
 ### Why Pre-Computed Forecasts?
 
 This architecture is a deliberate design decision aligned with 
-production best practices — not a technical workaround.
+production best practices not a technical workaround.
 
 In enterprise data environments, forecasting models are computationally 
 intensive and are never executed live per user request. Instead they 
-run on a scheduled basis — typically nightly or weekly — and their 
+run on a scheduled basis, typically nightly or weekly and their 
 outputs are persisted to a data store for downstream consumption by 
 dashboards and reporting tools.
 
 This separation of concerns delivers three key benefits:
 
-**1. Performance** — Dashboard response times are sub-second 
+**1. Performance**  Dashboard response times are sub-second 
 regardless of model complexity. Users are never waiting for a model 
 to train.
 
-**2. Reliability** — The presentation layer has no dependency on 
+**2. Reliability**  The presentation layer has no dependency on 
 model runtime environments or Stan compiler availability. Deployment 
 is clean and reproducible across any cloud environment.
 
-**3. Auditability** — Forecast outputs are versioned and stored 
+**3. Auditability**  Forecast outputs are versioned and stored 
 independently of the dashboard. This supports governance requirements 
-under ISO 42001 — forecasts can be reviewed, challenged and traced 
+under ISO 42001 as forecasts can be reviewed, challenged and traced 
 back to their source model without re-running the pipeline.
 
 This pattern mirrors architectures used in production BI platforms 
-such as Tableau, Power BI and Looker — where the data model and 
+such as Tableau, Power BI and Looker where the data model and 
 the presentation layer are always decoupled.
 
 ---
 
-## 🔬 Modelling Pipeline
+##  Modelling Pipeline
 
 ### Data Preparation
-- Dataset: Superstore Sales — 9,994 transactions across 4 years
+- Dataset: Superstore Sales consisiting of 9,994 transactions across 4 years
 - Aggregated to monthly frequency per category
 - Missing months imputed with category median
 - Stationarity tested using Augmented Dickey-Fuller test
@@ -104,11 +104,11 @@ the presentation layer are always decoupled.
 Both SARIMA and Prophet were evaluated on the same hold-out window. 
 Prophet was selected for the primary forecast output due to its 
 superior handling of irregular seasonality and automatic uncertainty 
-quantification — both critical for business planning applications.
+quantification both critical for business planning applications.
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 | Category | Peak Month | Pattern | Planning Recommendation |
 |----------|-----------|---------|------------------------|
@@ -120,87 +120,68 @@ quantification — both critical for business planning applications.
 - RMSE: £332.37
 - Forecast error: 3.3% of observed daily sales range
 - Validated on: 6-month hold-out test window
-- Confidence window: 6–12 months operational, 24–36 months strategic
+- Confidence window: 6-12 months operational, 24-36 months strategic
 
 ---
 
-## ✨ Dashboard Features
+## Dashboard Features
 
-- 📂 Three product categories — Office Supplies, Furniture, Technology
-- 📅 Four forecast horizons — 6, 12, 24 and 36 months
-- 📈 Interactive Plotly charts with confidence interval shading
-- 💼 Category-specific business recommendations
-- 📊 Forecast summary metrics with delta indicators
-- 🏛️ ISO 42001 governance principles applied throughout
-- 📱 Mobile responsive layout
+-  Three product categories: Office Supplies, Furniture, Technology
+-  Four forecast horizons: 6, 12, 24 and 36 months
+-  Interactive Plotly charts with confidence interval shading
+-  Category-specific business recommendations
+-  Forecast summary metrics with delta indicators
+-  ISO 42001 governance principles applied throughout
+-  Mobile responsive layout
 
 ---
 
 ## 🏛️ ISO 42001 AI Governance
 
 This dashboard is built in alignment with 
-**ISO/IEC 42001:2023 — AI Management Systems:**
+**ISO/IEC 42001:2023 - AI Management Systems:**
 
-✅ **Transparency**
+✅ **Transparency:**
 Forecasting methodology, model selection rationale and uncertainty 
 bands are fully visible to users. The two-tier architecture is 
 documented so stakeholders understand exactly how forecasts 
 are generated.
 
-✅ **Accountability**
+✅ **Accountability:**
 Clear authorship, data provenance and model versioning. Forecast 
 outputs are stored independently so they can be audited and 
 challenged without re-running the pipeline.
 
-✅ **Fairness**
+✅ **Fairness:**
 No demographic or protected characteristics are used in the model. 
 Forecasts are derived purely from historical sales patterns.
 
-✅ **Human Oversight**
-The dashboard explicitly frames forecasts as planning inputs — not 
+✅ **Human Oversight:**
+The dashboard explicitly frames forecasts as planning inputs not 
 decisions. Business recommendations are clearly labelled as guidance 
 requiring domain expertise and market knowledge to validate.
 
-✅ **Limitations Disclosed**
+✅ **Limitations Disclosed:**
 Confidence intervals widen over longer horizons. Users are advised 
 to use 6–12 month forecasts for operational decisions and treat 
 24–36 month forecasts as strategic directional guidance only.
 
 ---
 
-## 🛠️ How to Run Locally
+##  How to Run Locally
 ```bash
 git clone https://github.com/zubeen84/sales_forecasting_dashboard.git
 cd sales_forecasting_dashboard
 pip install -r requirements.txt
 streamlit run timeseries_app.py
-```
 
 ---
 
-## 📁 Repository Structure
-```
-sales_forecasting_dashboard/
-│
-├── timeseries_app.py              # Streamlit dashboard
-├── superstore.xls                 # Source dataset
-├── forecasts/
-│   ├── office_supplies_forecast.csv   # Prophet forecast outputs
-│   ├── furniture_forecast.csv
-│   └── technology_forecast.csv
-├── notebooks/
-│   └── time_series_forecasting.ipynb  # Full modelling pipeline
-├── requirements.txt
-└── README.md
-```
+##  Related Projects
 
----
+📓 [Time Series Analysis Notebook](https://github.com/zubeen84/Time-Series-Sales-Analysis) - full SARIMA and Prophet modelling pipeline
 
-## 🔗 Related Projects
-
-📓 [Time Series Analysis Notebook](https://github.com/zubeen84/Time-Series-Sales-Analysis) — full SARIMA and Prophet modelling pipeline
-
-🩺 [Diabetes Risk Predictor](https://github.com/zubeen84/diabetes-risk-predictor) — live ML classification app with ISO 42001 governance
+🩺 [Diabetes Risk Predictor](https://github.com/zubeen84/diabetes-risk-predictor) - live ML classification app with ISO 42001 governance
 
 ---
 
