@@ -1,4 +1,4 @@
-# 📈 Sales Forecasting Dashboard
+# 📈 Sales Forecasting Dashboard - Time Series Analysis - Python
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Live-brightgreen)
@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Live App
-👉 [Click here to open the dashboard](https://your-app-url.streamlit.app)
+👉 [Click here to open the dashboard](https://salesforecastingdashboard-2rhmw5d3ejmqsnbxrbmu9j.streamlit.app/)
 
 ---
 
