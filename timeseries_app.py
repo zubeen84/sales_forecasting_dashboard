@@ -217,4 +217,4 @@ st.success(
 )
 st.write(f"**Demand Pattern:** {insights[category]['pattern']}")
 st.write(f"**Planning Risk:** {insights[category]['risk']}")
-st.write("**Note:** Confidence intervals widen over longer horizons. Use 612 month forecasts for operational decisions and 24-36 month forecasts for strategic planning only.")
+st.write("**Note:** Confidence intervals widen over longer horizons. Use 6-12 month forecasts for operational decisions and 24-36 month forecasts for strategic planning only.")
