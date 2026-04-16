@@ -187,10 +187,10 @@ streamlit run timeseries_app.py
 ## Related Projects
 
 [Time Series Analysis Notebook](https://github.com/zubeen84/Time-Series-Sales-Analysis) 
-— full SARIMA and Prophet modelling pipeline (Part 1 of this project)
+- Full SARIMA and Prophet modelling pipeline (Part 1 of this project)
 
-[Diabetes Risk Predictor](https://github.com/zubeen84/diabetes-risk-predictor) 
-— live ML classification app with ISO 42001 governance
+[Diabetes Risk Predictor](https://github.com/zubeen84/diabetes_risk_predictor) 
+- Live ML classification app with ISO 42001 governance
 
 ---
 
